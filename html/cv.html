@@ -39,40 +39,43 @@
                 Analyste développeur
             </p>
         </div>
-        <div>
-            <p class="d-inline-flex gap-1">
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFormation" aria-expanded="true" aria-controls="collapseFormation"
-                    data-target="collapseFormation">
-                    Formation
-                </button>
-            </p>
-            <div class="collapse show" id="collapseFormation">
-                <div class="card card-body">
-                    <ul class="list-group">
-                        <li>
-                            <span>2025</span>
-                            <span>Formation UDEMY "Le cloud d'Azure: maîtriser les fondamentaux par la pratique"</span>
-                        </li>
-                        <li>
-                            <span>2023</span>
-                            <span>Formation NSIS d'initiation a la programmation C# sur .Net</span>
-                        </li>
-                        <li>
-                            <span>2023</span>
-                            <span>Formation NSIS au métier d'analyste-programmeur Cobol Mainframe</span>
-                        </li>
-                        <li>
-                            <span>2022</span>
-                            <span>Licence Informatique (Mention Assez Bien) - UFR de mathématique et d'informatique de
-                                Strasbourg</span>
-                        </li>
-                        <li>
-                            <span>2019</span>
-                            <span>Baccalauréat Science de l'Ingénieur (Mention Assez Bien), Lycée Heinrich-Nessel,
-                                Haguenau</span>
-                        </li>
-                    </ul>
+        <div id="formation">
+            <div class="card">
+                <div class="card-header">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFormation" aria-expanded="true" aria-controls="collapseFormation">
+                        Formation
+                    </button>
+                </div>
+                <div class="collapse show" id="collapseFormation" data-parent="#formation">
+                    <div class="card card-body">
+                        <ul class="list-group">
+                            <li>
+                                <span>2025</span>
+                                <span>Formation UDEMY "Le cloud d'Azure: maîtriser les fondamentaux par la
+                                    pratique"</span>
+                            </li>
+                            <li>
+                                <span>2023</span>
+                                <span>Formation NSIS d'initiation a la programmation C# sur .Net</span>
+                            </li>
+                            <li>
+                                <span>2023</span>
+                                <span>Formation NSIS au métier d'analyste-programmeur Cobol Mainframe</span>
+                            </li>
+                            <li>
+                                <span>2022</span>
+                                <span>Licence Informatique (Mention Assez Bien) - UFR de mathématique et d'informatique
+                                    de
+                                    Strasbourg</span>
+                            </li>
+                            <li>
+                                <span>2019</span>
+                                <span>Baccalauréat Science de l'Ingénieur (Mention Assez Bien), Lycée Heinrich-Nessel,
+                                    Haguenau</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -82,18 +85,18 @@
                 <div class="card">
                     <div class="card-header" id="headingOne">
                         <h5 class="mb-0">
-                            <button class="btn btn-primary" data-toggle="collapse" data-target="#collapseCompTech"
-                                aria-expanded="true" aria-controls="collapseCompTech">
+                            <button class="btn btn-primary" data-toggle="collapse" data-bs-toggle="collapse"
+                                data-bs-target="#collapseCompTech" aria-expanded="true"
+                                aria-controls="collapseCompTech">
                                 Competences Techniques
                             </button>
                         </h5>
                     </div>
 
-                    <div id="collapseCompTech" class="collapse show" aria-labelledby="headingOne"
-                        data-parent="#accordion">
-                        <div class="card-body">
+                    <div id="collapseCompTech" class="collapse show" data-parent="#accordion">
+                        <div class="card card-body">
                             <div class="row">
-                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="col-lg-3 col-md-4 col-sm-6 card card-body">
                                     <h5>Langages de programmation</h5>
                                     <p>
                                     <ul>
@@ -113,7 +116,7 @@
                                     </ul>
                                     </p>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="col-lg-3 col-md-4 col-sm-6 card card-body">
                                     <h5>SGBD</h5>
                                     <p>
                                     <ul>
@@ -125,7 +128,7 @@
                                     </ul>
                                     </p>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="col-lg-3 col-md-4 col-sm-6 card card-body">
                                     <h5>Système d'éxploitation</h5>
                                     <p>
                                     <ul>
