@@ -6,4 +6,8 @@ def home_view(request):
     return render(request, 'home.html')
 
 def contact_view(request):
-    return HttpResponse('contactez nous')
+    # return HttpResponse('contactez nous')
+    return render(request, 'contact.html')
+
+def article_view(request):
+    return render(request, 'article.html')
