@@ -4,5 +4,5 @@ from .articls import articles
 # Create your views here.
 
 def article_view(request):
-    return render(request, 'article/article.html', context={'articles' : articles})
+    return render(request, 'articles/articles.html', context={'articles' : articles})
     # return HttpResponse("Pages article")

@@ -24,5 +24,5 @@ urlpatterns = [
     path('', views.home_view, name='Home'),
     path('contact/', views.contact_view, name='Contact'),
     # path('article/', views.article_view, name='Article')
-    path('article/', include('article.urls')),
+    path('articles/', include('articles.urls')),
 ]
