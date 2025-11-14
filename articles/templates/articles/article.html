@@ -1,0 +1,16 @@
+{% extends 'templateCommon.html' %}
+
+
+{% block headTitle %}
+Article {{ article.titre }}
+{% endblock %}
+
+{% block contenu %}
+<h1>{{ article.titre }}</h1>
+<h3 class="text-muted">{{ article.datePublication }}</h3>
+<p>{{ article.contenu }}</p>
+
+
+
+
+{% endblock %}
