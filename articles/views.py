@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from django.http import Http404
 # from .articls import articles
 
 from .models import Article
@@ -16,6 +17,10 @@ def article_view(request, slug):
     #     if article["slug"] == slug:
     #         # return HttpResponse(f"Titre : {article["titre"]}\nContenu : {article["contenu"]}")
     #         return render(request, 'articles/article.html', context={'article' : article})
-    article = Article.objects.get(slug=slug)
+    
+    try:
+        article = Article.objects.get(slug=slug)
+    except Article.DoesNotExist:
+        raise Http404("Article non trouver")
     return render(request, 'articles/article.html', context={'article' : article})
     # return HttpResponse(f"Article {slug} non trouver")
