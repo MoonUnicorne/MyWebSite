@@ -22,7 +22,6 @@ from .views import *
 app_name = 'articles'
 
 urlpatterns = [
-    # path("admin/", admin.site.urls),
     path('', articles_view, name='Articles'),
     path('<slug:slug>/', article_view, name='article')
 ]
