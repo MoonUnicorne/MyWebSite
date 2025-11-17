@@ -15,3 +15,6 @@ def article_view(request, slug):
     except Article.DoesNotExist:
         raise Http404("Article non trouver")
     return render(request, 'articles/article.html', context={'article' : article})
+
+def create_article_view(request):
+    return render(request, 'articles/create_article.html')

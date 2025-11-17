@@ -23,5 +23,6 @@ app_name = 'articles'
 
 urlpatterns = [
     path('', articles_view, name='Articles'),
+    path("creer", create_article_view, name="creer_article"),
     path('<slug:slug>/', article_view, name='article')
 ]
