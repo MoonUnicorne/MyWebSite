@@ -1,7 +1,9 @@
 from django.shortcuts import render
-from django.http import Http404
+from django.http import Http404, HttpResponseRedirect
+from django.urls import reverse
 
-from .models import Article
+from .models import Article 
+from .forms import ArticleForm
 
 
 def articles_view(request):
@@ -17,4 +19,9 @@ def article_view(request, slug):
     return render(request, 'articles/article.html', context={'article' : article})
 
 def create_article_view(request):
-    return render(request, 'articles/create_article.html')
+    if request.method == 'POST':
+        form = ArticleForm(request.POST)
+        form.save()
+        # return HttpResponseRedirect('/articles/')
+        return HttpResponseRedirect(reverse('articles:Articles'))
+    return render(request, 'articles/create_article.html', context={'form': ArticleForm()})

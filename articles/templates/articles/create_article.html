@@ -27,6 +27,11 @@ Articles
   </div>
 </nav>
 
+<form action="{% url 'articles:creer_article' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Créer l'article</button>
+</form>
 
 
 
