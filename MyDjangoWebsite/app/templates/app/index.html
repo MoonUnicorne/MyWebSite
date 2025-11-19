@@ -1,32 +1,34 @@
-{% extends "app/layout.html" %}
+﻿{% extends "app/layout.html" %}
 
 {% block content %}
 
 <div class="jumbotron">
-    <h1>Django</h1>
-    <p class="lead">Django is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+    <h1>Bienvenue sur mon site web !</h1>
+    <p class="lead">
+        Je suis ravi de vous accueillir sur mon site web personnel.
+        Ce site a été crée en utilisant le framework <a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://djangobook.com/django-tutorials/">DJANGO</a>
+        dans le but initial de me former à ce framework.
+        N'hésitez pas à explorer les différentes sections du site pour en savoir plus sur moi et ce que je fais.
+    </p>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            Django gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">To do list</h5>
+        <p class="card-text">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    reprendre la formation
+                </li>
+                <li class="list-group-item">
+                    ajouter une page cv
+                </li>
+                <li class="list-group-item">
+                    ajouter une page portfolio
+                </li>
+            </ul>
         </p>
-        <p><a class="btn btn-default" href="https://djangobook.com/django-tutorials/">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>The Python Package Index is a repository of software for the Python programming language.</p>
-        <p><a class="btn btn-default" href="https://pypi.org/">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Microsoft Azure</h2>
-        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
-        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+
     </div>
 </div>
 
