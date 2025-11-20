@@ -1,62 +1,48 @@
 {% extends 'templateCommon.html' %}
 
-
 {% block headTitle %}
-Articles
+  Articles
 {% endblock %}
 
 {% block contenu %}
+  <nav class="navbar navbar-expand-sm bg-secondary navbar-secondary">
+    <a class="navbar-brand" href="{% url 'articles:Articles' %}">Les article</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsArticles" aria-controls="navbarsArticles" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
-
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <h1 class="navbar-brand" href="#">Les articles</h1>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link active" href="{% url 'articles:Articles' %}">List des articles</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'articles:creer_article' %}">Créer un article</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Filtrer
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Date de publication</a>
-          <a class="dropdown-item" href="#">Titre</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Chercher un article ...">
-      </li>
-      <li class="nav-item">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Chercher</button>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<div class="row">
-{% for article in articles %}
-<div class="col-sm-6 col-md-4 col-lg-3">
-    <div class="card card-body">
-        <h5 class="card-title"><a href={% url 'articles:article' slug=article.slug %}> {{ article.titre }} </a></h5>
-        <h6 class="card-subtitle text-muted">{{ article.datePublication }}</h6>
-        <p class="card-text">{{ article.contenu }}</p>
+    <div class="collapse navbar-collapse" id="navbarsArticles">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link active" href="{% url 'articles:Articles' %}">List des articles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'articles:creer_article' %}">Créer un article</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="filtreArticles" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filtrer</a>
+          <div class="dropdown-menu" aria-labelledby="filtreArticles">
+            <a class="dropdown-item" href="#">Date de publication</a>
+            <a class="dropdown-item" href="#">Titre</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Chercher un article ..." />
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Chercher</button>
+        </li>
+      </ul>
     </div>
-</div>
+  </nav>
 
-{% endfor %}
-</div>
-
-
-
+  <div class="row">
+    {% for article in articles %}
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card card-body">
+          <h5 class="card-title"><a href="{% url 'articles:article' slug=article.slug %}">{{ article.titre }}</a></h5>
+          <h6 class="card-subtitle text-muted">{{ article.datePublication }}</h6>
+          <p class="card-text text-truncate">{{ article.contenu }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 {% endblock %}
