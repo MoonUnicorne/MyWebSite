@@ -1,38 +1,38 @@
 {% extends 'templateCommon.html' %}
 
-
 {% block headTitle %}
-Articles
+  Articles
 {% endblock %}
 
 {% block contenu %}
+  <nav class="navbar navbar-expand-sm bg-secondary navbar-secondary">
+    <a class="navbar-brand" href="{% url 'articles:Articles' %}">Les article</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsArticles" aria-controls="navbarsArticles" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
+    <div class="collapse navbar-collapse" id="navbarsArticles">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'articles:Articles' %}">List des articles</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link active" href="{% url 'articles:creer_article' %}">Créer un article</a>
+        </li>
+        <li class="nav-item dropdown disabled">
+          <a class="nav-link dropdown-toggle disabled" href="#" id="filtreArticles" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filtrer</a>
+          <div class="dropdown-menu" aria-labelledby="filtreArticles">
+            <a class="dropdown-item" href="#">Date de publication</a>
+            <a class="dropdown-item" href="#">Titre</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <h1 class="navbar-brand" href="#">Les articles</h1>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'articles:Articles' %}">List des articles</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link active" href="{% url 'articles:creer_article' %}">Créer un article</a>
-      </li>
-    </ul>
+  <div class="container mt-4">
+    <form action="{% url 'articles:creer_article' %}" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary">Créer l'article</button>
+    </form>
   </div>
-</nav>
-
-<form action="{% url 'articles:creer_article' %}" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="btn btn-primary">Créer l'article</button>
-</form>
-
-
-
 {% endblock %}
