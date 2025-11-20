@@ -6,6 +6,7 @@ Article {{ article.titre }}
 {% endblock %}
 
 {% block contenu %}
+<img src="{{ article.image.url }}" class="img-fluid mb-4" alt="Image de l'article {{ article.titre }}">
 <h1>{{ article.titre }}</h1>
 <h3 class="text-muted">{{ article.datePublication }}</h3>
 <p>{{ article.contenu }}</p>

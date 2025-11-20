@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block contenu %}
-  <nav class="navbar navbar-expand-sm bg-secondary navbar-secondary">
+  <nav class="navbar navbar-expand-sm bg-secondary navbar-light">
     <a class="navbar-brand" href="{% url 'articles:Articles' %}">Les article</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsArticles" aria-controls="navbarsArticles" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
@@ -64,6 +64,7 @@
       {% for article in articles %}
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="card card-body">
+            <img src="{{ article.image.url }}" class="card-img-top" alt="Image de l'article {{ article.titre }}">
             <h5 class="card-title"><a href="{% url 'articles:article' slug=article.slug %}">{{ article.titre }}</a></h5>
             <h6 class="card-subtitle text-muted">{{ article.datePublication }}</h6>
             <p class="card-text text-truncate">{{ article.contenu }}</p>
