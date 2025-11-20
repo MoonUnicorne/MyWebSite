@@ -11,6 +11,22 @@ def articles_view(request):
 
     return render(request, 'articles/articles.html', context={'articles' : articles})
 
+def articles_view_ordered(request, order):
+    try:
+        if order == 1:
+            articles = Article.objects.all().order_by("-datePublication")
+        elif order == 2:
+            articles = Article.objects.all().order_by("datePublication")
+        elif order == 3:
+            articles = Article.objects.all().order_by("titre")
+        elif order == 4:
+            articles = Article.objects.all().order_by("-titre")
+        else:
+            articles = Article.objects.all()
+    except Article.DoesNotExist:
+        raise Http404("Articles non trouver")
+    return render(request, 'articles/articles.html', context={'articles' : articles})
+
 def article_view(request, slug):
     try:
         article = Article.objects.get(slug=slug)

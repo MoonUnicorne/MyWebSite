@@ -23,6 +23,7 @@ app_name = 'articles'
 
 urlpatterns = [
     path('', articles_view, name='Articles'),
+    path('<int:order>/', articles_view_ordered, name='Articles_ordered'),
     path("creer", create_article_view, name="creer_article"),
     path('<slug:slug>/', article_view, name='article')
 ]
