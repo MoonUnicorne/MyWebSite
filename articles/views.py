@@ -36,7 +36,7 @@ def article_view(request, slug):
 
 def create_article_view(request):
     if request.method == 'POST':
-        form = ArticleForm(request.POST)
+        form = ArticleForm(request.POST, request.FILES)
         form.save()
         # return HttpResponseRedirect('/articles/')
         return HttpResponseRedirect(reverse('articles:Articles'))
