@@ -1,4 +1,4 @@
-"""
+﻿"""
 WSGI config for MyDjangoWebsite project.
 
 This module contains the WSGI application used by Django's development server
@@ -19,9 +19,12 @@ https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/
 import os
 from django.core.wsgi import get_wsgi_application
 
+settings_module = 'MyDjangoWebsite.deployment' if 'WEBSITE_HOSTNAME' in os.environ else 'MyDjangoWebsite.settings'
+
+
 os.environ.setdefault(
     'DJANGO_SETTINGS_MODULE',
-    'MyDjangoWebsite.settings')
+    settings_module)
 
 # This application object is used by any WSGI server configured to use this
 # file. This includes Django's development server, if the WSGI_APPLICATION
