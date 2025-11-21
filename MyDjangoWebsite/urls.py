@@ -1,4 +1,4 @@
-"""
+﻿"""
 Definition of urls for MyDjangoWebsite.
 """
 
@@ -13,6 +13,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('contact/', views.contact, name='contact'),
     path('about/', views.about, name='about'),
+    path('cv/', views.cv, name='cv'),
     path('login/',
          LoginView.as_view
          (

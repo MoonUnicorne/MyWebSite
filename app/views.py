@@ -1,4 +1,4 @@
-"""
+﻿"""
 Definition of views.
 """
 
@@ -40,6 +40,19 @@ def about(request):
         {
             'title':'About',
             'message':'Your application description page.',
+            'year':datetime.now().year,
+        }
+    )
+
+def cv(request):
+    """Renders the cv page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/cv.html',
+        {
+            'title':'CV',
+            'message':'Your CV page.',
             'year':datetime.now().year,
         }
     )
