@@ -1,0 +1,35 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Bienvenue sur mon site web !</h1>
+    <p class="lead">
+        Je suis ravi de vous accueillir sur mon site web personnel.
+        Ce site a été crée en utilisant le framework <a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://djangobook.com/django-tutorials/">DJANGO</a>
+        dans le but initial de me former à ce framework.
+        N'hésitez pas à explorer les différentes sections du site pour en savoir plus sur moi et ce que je fais.
+    </p>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">To do list</h5>
+        <p class="card-text">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    reprendre la formation
+                </li>
+                <li class="list-group-item">
+                    ajouter une page cv
+                </li>
+                <li class="list-group-item">
+                    ajouter une page portfolio
+                </li>
+            </ul>
+        </p>
+
+    </div>
+</div>
+
+{% endblock %}
