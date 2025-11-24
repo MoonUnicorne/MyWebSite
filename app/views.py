@@ -6,6 +6,8 @@ from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpRequest
 
+from app import cv_data
+
 def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
@@ -54,5 +56,10 @@ def cv(request):
             'title':'CV',
             'message':'Your CV page.',
             'year':datetime.now().year,
+            'formations': cv_data.formations,
+            'experiences': cv_data.experiences,
+            'competences': cv_data.competences,
+            'vie_associative': cv_data.vie_associative,
+            'loisirs': cv_data.loisirs,
         }
     )

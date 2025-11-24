@@ -9,117 +9,54 @@
         Analyste développeur
     </p>
 </div>
-<div id="formation">
+<div id="experience">
     <div class="card">
         <div class="card-header">
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFormation" aria-expanded="true" aria-controls="collapseFormation">
-                Formation
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseexperience" aria-controls="collapseexperience" aria-expanded="true">
+                Experience
             </button>
         </div>
-        <div class="collapse show" id="collapseFormation" data-parent="#formation">
+        <div class="show in" id="collapseexperience" data-parent="#experience">
             <div class="card card-body">
-                <ul class="list-group">
-                    <li>
-                        <span>2025</span>
-                        <span>
-                            Formation UDEMY "Le cloud d'Azure: maîtriser les fondamentaux par la
-                            pratique"
-                        </span>
-                    </li>
-                    <li>
-                        <span>2023</span>
-                        <span>Formation NSIS d'initiation a la programmation C# sur .Net</span>
-                    </li>
-                    <li>
-                        <span>2023</span>
-                        <span>Formation NSIS au métier d'analyste-programmeur Cobol Mainframe</span>
-                    </li>
-                    <li>
-                        <span>2022</span>
-                        <span>
-                            Licence Informatique (Mention Assez Bien) - UFR de mathématique et d'informatique
-                            de
-                            Strasbourg
-                        </span>
-                    </li>
-                    <li>
-                        <span>2019</span>
-                        <span>
-                            Baccalauréat Science de l'Ingénieur (Mention Assez Bien), Lycée Heinrich-Nessel,
-                            Haguenau
-                        </span>
-                    </li>
-                </ul>
+                    {% for experience in experiences %}
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">{{ experience.poste }} <span class="text-muted">{{ experience.entreprise }}</span> </div>
+                        
+                        </div>
+                    <div class="card-body">
+                        <div class="card-text">
+                            {{ experience.description }}
+                        </div>
+                        <div class="card-text text-muted"> {{ experience.periode }}</div>
+                    </div>
+                    </div>
+                    {% endfor %}
             </div>
         </div>
     </div>
 </div>
 
-<div>
-    <div id="accordion">
-        <div class="card">
-            <div class="card-header" id="headingOne">
-                <h5 class="mb-0">
-                    <button class="btn btn-primary" data-toggle="collapse" data-bs-toggle="collapse"
-                            data-bs-target="#collapseCompTech" aria-expanded="true"
-                            aria-controls="collapseCompTech">
-                        Competences Techniques
-                    </button>
-                </h5>
-            </div>
+<div id="formation">
+    <div class="card">
+        <div class="card-header">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseFormation" aria-controls="collapseFormation" aria-expanded="true">
+                Formation
+            </button>
+        </div>
+        <div class="show in" id="collapseFormation" data-parent="#formation">
+            <div class="card card-body">
+                <ul class="list-group">
 
-            <div id="collapseCompTech" class="collapse show" data-parent="#accordion">
-                <div class="card card-body">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-6 card card-body">
-                            <h5>Langages de programmation</h5>
-                            <p>
-                                <ul>
-                                    <li>
-                                        C
-                                    </li>
-                                    <li>
-                                        C#
-                                    </li>
-                                    <li>C++</li>
-                                    <li>Python</li>
-                                    <li>SQL</li>
-                                    <li>Java</li>
-                                    <li>Javascript</li>
-                                    <li>COBOL</li>
-                                    <li>HASKEL</li>
-                                </ul>
-                            </p>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 card card-body">
-                            <h5>SGBD</h5>
-                            <p>
-                                <ul>
-                                    <li>
-                                        DB2
-                                    </li>
-                                    <li>MySQL</li>
-                                    <li>SQL Server</li>
-                                </ul>
-                            </p>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 card card-body">
-                            <h5>Système d'éxploitation</h5>
-                            <p>
-                                <ul>
-                                    <li>
-                                        Windows
-                                    </li>
-                                    <li>Linux</li>
-                                    <li>TSO/ISPF</li>
-                                </ul>
-                            </p>
-                        </div>
-
-
-                    </div>
-                </div>
+                    {% for formation in formations %}
+                    <li>
+                        <span>{{ formation.annee }}</span>
+                        <span>
+                            {{ formation.titre }} - {{ formation.lieu }}
+                        </span>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>
