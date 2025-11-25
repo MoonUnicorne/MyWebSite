@@ -49,7 +49,7 @@
                 <ul class="list-group">
 
                     {% for formation in formations %}
-                    <li>
+                    <li class="list-group-item">
                         <span>{{ formation.annee }}</span>
                         <span>
                             {{ formation.titre }} - {{ formation.lieu }}
@@ -76,7 +76,7 @@
                 <ul class="list-group">
 
                     {% for competence in competences %}
-                    <li>
+                    <li class="list-group-item">
                         <span><strong>{{ competence.categorie }}</strong></span>
                         <span>
                             {{ competence.valeur }}
@@ -140,7 +140,7 @@
                 <ul class="list-group">
 
                     {% for Loisir in loisirs %}
-                    <li>
+                    <li class="list-group-item">
                         <span>{{ Loisir }}</span>
                     </li>
                     {% endfor %}
