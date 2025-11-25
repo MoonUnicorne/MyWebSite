@@ -59,7 +59,7 @@ def cv(request):
             'formations': cv_data.formations,
             'experiences': cv_data.experiences,
             'competences': cv_data.competences,
-            'vie_associative': cv_data.vie_associative,
+            'vie_associatives': cv_data.vie_associatives,
             'loisirs': cv_data.loisirs,
         }
     )

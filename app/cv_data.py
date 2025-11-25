@@ -39,20 +39,40 @@ experiences = [
         },
     ]
 competences = [
-        "Langages de programmation : C#, C++, C, Python, Java, JavaScript, Cobol",
-        "Frameworks : Django, .NET, .NET MAUI, DevBooster",
-        "Bases de données : MySQL, PostgreSQL, DB2, SQL Server",
-        "Outils : Git, GitHub, RTC, Azure, Visual Studio, Visual Studio Code, Unity, Blender",
-        "Méthodologies : Agile, Scrum, Cycle en V",
-        "Systèmes d'exploitation : Windows, Linux, TSO Maineframe",
-        "Langues : Français (natif), Anglais (intermédiaire), Allemand (notions de base)",
-    ]
-vie_associative = [
+    {
+        "categorie": "Langages de programmation",
+        "valeur": "C#, C++, C, Python, Java, JavaScript, Cobol"
+    },
+    {
+        "categorie":"Frameworks",
+        "valeur": "Django, .NET, .NET MAUI, DevBooster"
+    },  
+    {
+        "categorie":"Bases de données",
+        "valeur": "MySQL, PostgreSQL, DB2, SQL Server",
+    },  
+    {
+        "categorie":"Outils",
+        "valeur": "Git, GitHub, RTC, Azure, Visual Studio, Visual Studio Code, Unity, Blender",
+    },  
+    {
+        "categorie":"Méthodologies",
+        "valeur": "Agile, Scrum, Cycle en V",
+    },  
+    {
+        "categorie":"Systèmes d'exploitation",
+        "valeur": "Windows, Linux, TSO Maineframe",
+    },  
+    {
+        "categorie":"Langues",
+        "valeur": "Français (natif), Anglais (intermédiaire), Allemand (notions de base)",
+    },
+]
+vie_associatives = [
         {
             "role": "Membre actif",
             "association": "À KOI K'ON JOUE",
-            "description": "Participation à l'animation des Gunder'Games, festival de jeux de société modernes tout public (enfants, adultes et experts) organisé par l'association destiné à faire découvrir la centaine de jeux proposée ainsi que des nouveautés en avant-première. (Accueil des visiteurs, encadrement de jeux)"  
-            "Participation au soirée jeux de société pour les membres.",
+            "description": "Participation à l'animation des festival de jeux de société tout public (enfants, adultes et experts). Accueil des visiteurs, encadrement de jeux",
             "periode": "2022 - Présent",
             "lien": "/AKKJ",
         },
@@ -77,10 +97,10 @@ vie_associative = [
             "periode": "2017 - 2019",
             "lien": "/Theatre",
         },
-    ],
+    ]
 loisirs = [
         "Programmation de projets personnels",
         "Jeux de sociéter",
         "Jeux de role (joueur et maitre de jeux)",
         "Loisir créatif : realisation de maquette, assemblage et peinture de figurine, bricolage, modelisation 3D",
-    ],
+    ]

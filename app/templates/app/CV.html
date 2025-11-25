@@ -12,26 +12,26 @@
 <div id="experience">
     <div class="card">
         <div class="card-header">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseexperience" aria-controls="collapseexperience" aria-expanded="true">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExperience" aria-controls="collapseExperience" aria-expanded="true">
                 Experience
             </button>
         </div>
-        <div class="show in" id="collapseexperience" data-parent="#experience">
+        <div class="show in" id="collapseExperience" data-bs-parent="#experience">
             <div class="card card-body">
-                    {% for experience in experiences %}
+                {% for experience in experiences %}
                 <div class="card">
                     <div class="card-header">
                         <div class="card-title">{{ experience.poste }} <span class="text-muted">{{ experience.entreprise }}</span> </div>
-                        
-                        </div>
+
+                    </div>
                     <div class="card-body">
                         <div class="card-text">
                             {{ experience.description }}
                         </div>
                         <div class="card-text text-muted"> {{ experience.periode }}</div>
                     </div>
-                    </div>
-                    {% endfor %}
+                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -40,11 +40,11 @@
 <div id="formation">
     <div class="card">
         <div class="card-header">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseFormation" aria-controls="collapseFormation" aria-expanded="true">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFormation" aria-controls="collapseFormation" aria-expanded="true">
                 Formation
             </button>
         </div>
-        <div class="show in" id="collapseFormation" data-parent="#formation">
+        <div class="show in" id="collapseFormation" data-bs-parent="#formation">
             <div class="card card-body">
                 <ul class="list-group">
 
@@ -62,4 +62,102 @@
     </div>
 </div>
 
-{% endblock %}
+
+
+<div id="competence">
+    <div class="card">
+        <div class="card-header">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCompetence" aria-controls="collapseCompetence" aria-expanded="true">
+                Competence
+            </button>
+        </div>
+        <div class="show in" id="collapseCompetence" data-bs-parent="#competence">
+            <div class="card card-body">
+                <ul class="list-group">
+
+                    {% for competence in competences %}
+                    <li>
+                        <span><strong>{{ competence.categorie }}</strong></span>
+                        <span>
+                            {{ competence.valeur }}
+                        </span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="card">
+        <div class="card-header">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapsevie_associative" aria-controls="collapsevie_associative" aria-expanded="true">
+                Vie associative
+            </button>
+        </div>
+        <div class="show in" id="collapsevie_associative" data-bs-parent="#vie_associative">
+            <div class="card card-body">
+                <div class="row">
+
+                    {% for vie_associative in vie_associatives %}
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="card-title">
+                                    {{ vie_associative.association }}
+                                </h6>
+                                <h6 class="card-subtitle text-muted">
+                                    {{ vie_associative.role }} - {{vie_associative.periode}}
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    {{ vie_associative.description }}
+                                </p>
+                                <a href="{{ vie_associative.lien }}" class="btn btn-secondary">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="Loisir">
+    <div class="card">
+        <div class="card-header">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLoisir" aria-controls="collapseLoisir" aria-expanded="true">
+                Loisir
+            </button>
+        </div>
+        <div class="show in" id="collapseLoisir" data-bs-parent="#Loisir">
+            <div class="card card-body">
+                <ul class="list-group">
+
+                    {% for Loisir in loisirs %}
+                    <li>
+                        <span>{{ Loisir }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div>
+    <div class="card">
+        <div class="card-header">
+            <button class="btn btn-secondary" onclick="window.print()">Imprimer le CV</button>
+        </div>
+    </div>
+</div>
+    {% endblock %}
