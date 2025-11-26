@@ -1,4 +1,5 @@
 ﻿let theme = 'dark'
+let btnThem = document.getElementById('btnSwitch');
 
 addEventListener('load', (event) => {
     theme = getCookie('theme')
@@ -56,4 +57,4 @@ function SwitchTheme() {
     setCookie('theme', theme, 30)
 }
 
-document.getElementById('btnSwitch').addEventListener('click', SwitchTheme)
+btnThem.addEventListener('click', SwitchTheme)
