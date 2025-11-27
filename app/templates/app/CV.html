@@ -21,7 +21,7 @@
                 {% for experience in experiences %}
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-title">{{ experience.poste }} <span class="text-muted">{{ experience.entreprise }}</span> </div>
+                        <div class="card-title">{{ experience.poste }} <a href="{{ experience.lien }}" class="link-info">{{ experience.entreprise }}</a> </div>
 
                     </div>
                     <div class="card-body">
