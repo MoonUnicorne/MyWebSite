@@ -1,0 +1,286 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+
+<div>
+    <h2>Florian Eckert</h2>
+    <p>
+        Analyste développeur
+    </p>
+</div>
+<div id="experience">
+    <div class="card">
+        <div class="card-header">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExperience" aria-controls="collapseExperience" aria-expanded="true">
+                Experience
+            </button>
+        </div>
+        <div class="show in" id="collapseExperience" data-bs-parent="#experience">
+            <div class="card card-body">
+                <!--{% for experience in experiences %}
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">{{ experience.poste }} <a href="{{ experience.lien }}" class="link-info">{{ experience.entreprise }}</a> </div>
+
+        </div>
+        <div class="card-body">
+            <div class="card-text">
+                {{ experience.description }}
+            </div>
+            <div class="card-text text-muted"> {{ experience.periode }}</div>
+        </div>
+    </div>
+    {% endfor %}-->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Ingenieur d'étude et dévelopement <a href="https://intm.com/" class="link-info">INTM</a> </div>
+
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text">
+                            Développement et maintenance d'applications intranet et web dans l'assurance santé.
+                            Mission chez <a href="https://www.e-i.com/fr/index.html" class="link-info">Euro Information</a> (filial du Crédit Mutuel).
+                            Analyse du besoin ,Rédaction des spécifications fonctionnelles et techniques, Développement COBOL et C#.NET (framework devbooster), Test unité, Test d’intégration, Maintenance, Correction d’incident
+                        </div>
+                        <div class="card-text text-muted"> Juillet 2023 - Décembre 2025</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Projet de Licence 3 <a href="https://mathinfo.unistra.fr" class="link-info">Universiter de Strabroug</a></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text">
+                            <p>
+                                Au sein d'une squad organisée en mode AGILE (User Stories, Poker Planning, Weekly Sprint & Daily Meeting), adaptation du célèbre jeu Trivial Pursuit sur le thème de l'Alsace (<a href="https://www.instagram.com/choucroute_pursuit?igsh=b21sY2lmOHByb2k=" class="link-info">Choucroute Pursuit</a>) en version numérique sous Windows avec un portage mobile sous Android.
+                            </p>
+                            <p>
+                                Cette équipe était constituée de 10 personnes :
+                                <ul>
+                                    <li>Chef d'équipe</li>
+                                    <li>
+                                        Back-End: 5 développeurs (Python, MySQL),
+                                    </li>
+                                    <li>
+                                        Front-End: 4 développeurs (C# Framework Unity).
+                                    </li>
+                                </ul>
+                            </p>
+                            <p>
+                                Dans le cadre de l'activité de Développeur sur la partie Front-End:
+                                <ul>
+                                    <li>
+                                        Etude de l'Expression Du Besoin,
+                                    </li>
+                                    <li>
+                                        Rédaction du cahier des charges et des Users Stories,
+                                    </li>
+                                    <li>
+                                        Spécifications fonctionnelles,
+                                    </li>
+                                    <li>
+                                        Répartition des Users Stories et attribution,
+                                    </li>
+                                    <li>
+                                        Développement (code source commenté et versionné sous GIT),
+                                    </li>
+                                    <li>
+                                        Prise en charge de l'intégration Back-End / Front-End à la suite de problèmes de format de données,
+                                    </li>
+                                    <li>
+                                        Compilation en mode Windows & Android,
+                                    </li>
+                                    <li>
+                                        Tests unitaires et recettes fonctionnelles sur les deux environnements,
+                                    </li>
+                                    <li>
+                                        Rédaction de la documentation technique et utilisateur,
+                                    </li>
+                                    <li>
+                                        Mise en place d'une campagne de promotion du jeu sur Instagram et Facebook.
+                                    </li>
+                                </ul>
+                            </p>
+                            <p>
+                                Environnement: C#, Unity, Python, Scrum, MySQL, GIT.
+                            </p>
+                        </div>
+                        <div class="card-text text-muted">
+                            Novebre 2021 - Mai 2022
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Manutentionnaire (Job d'été)<a href="https://www.siemens.com/fr/fr.html" class="link-info">SIEMENS</a></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text">
+                            Deplacement du magasin caisse vers un autre entrepo
+                        </div>
+                        <div class="card-text text-muted"> Août 2021</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Equipier magasin (Job d'été)<a href="https://www.auchan.fr/" class="link-info">AUCHAN</a></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text">
+                            Mise en rayon
+                        </div>
+                        <div class="card-text text-muted"> Juillet 2021</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Préparateur de commande (Job d'été)<a href="https://www.ukal-elevage.com/fr/le-monde-de-l-elevage" class="link-info">UKAL</a></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text">
+                            Préparation de commande de matériel agricole et d'élevage et expédition des colis
+                        </div>
+                        <div class="card-text text-muted"> Août 2020</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Manutentionnaire (Job d'été)<a href="https://www.siemens.com/fr/fr.html" class="link-info">SIEMENS</a></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text">
+                            Assemblage de debimètres
+                        </div>
+                        <div class="card-text text-muted"> Juillet 2020</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="formation">
+    <div class="card">
+        <div class="card-header">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFormation" aria-controls="collapseFormation" aria-expanded="true">
+                Formation
+            </button>
+        </div>
+        <div class="show in" id="collapseFormation" data-bs-parent="#formation">
+            <div class="card card-body">
+                <ul class="list-group">
+
+                    {% for formation in formations %}
+                    <li class="list-group-item">
+                        <span>{{ formation.annee }}</span>
+                        <span>
+                            {{ formation.titre }} - {{ formation.lieu }}
+                        </span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="competence">
+    <div class="card">
+        <div class="card-header">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCompetence" aria-controls="collapseCompetence" aria-expanded="true">
+                Competence
+            </button>
+        </div>
+        <div class="show in" id="collapseCompetence" data-bs-parent="#competence">
+            <div class="card card-body">
+                <ul class="list-group">
+
+                    {% for competence in competences %}
+                    <li class="list-group-item">
+                        <span><strong>{{ competence.categorie }}</strong></span>
+                        <span>
+                            {{ competence.valeur }}
+                        </span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="card">
+        <div class="card-header">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapsevie_associative" aria-controls="collapsevie_associative" aria-expanded="true">
+                Vie associative
+            </button>
+        </div>
+        <div class="show in" id="collapsevie_associative" data-bs-parent="#vie_associative">
+            <div class="card card-body">
+                <div class="row">
+
+                    {% for vie_associative in vie_associatives %}
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="card-title">
+                                    {{ vie_associative.association }}
+                                </h6>
+                                <h6 class="card-subtitle text-muted">
+                                    {{ vie_associative.role }} - {{vie_associative.periode}}
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    {{ vie_associative.description }}
+                                </p>
+                                <a href="{{ vie_associative.lien }}" class="btn btn-secondary">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="Loisir">
+    <div class="card">
+        <div class="card-header">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLoisir" aria-controls="collapseLoisir" aria-expanded="true">
+                Loisir
+            </button>
+        </div>
+        <div class="show in" id="collapseLoisir" data-bs-parent="#Loisir">
+            <div class="card card-body">
+                <ul class="list-group">
+
+                    {% for Loisir in loisirs %}
+                    <li class="list-group-item">
+                        <span>{{ Loisir }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div>
+    <div class="card">
+        <div class="card-header">
+            <a class="btn btn-secondary" href="https://cvdesignr.com/p/4boqN5NA3xE8a0d">Imprimer le CV</a>
+        </div>
+    </div>
+</div>
+    {% endblock %}
