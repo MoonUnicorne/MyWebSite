@@ -57,7 +57,6 @@ def cv(request):
             'message':'Your CV page.',
             'year':datetime.now().year,
             'formations': cv_data.formations,
-            'experiences': cv_data.experiences,
             'competences': cv_data.competences,
             'vie_associatives': cv_data.vie_associatives,
             'loisirs': cv_data.loisirs,

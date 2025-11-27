@@ -30,14 +30,6 @@
             "annee": "2019",
         },
         ]
-experiences = [
-        {
-            "poste": "Ingenieur d'étude et dévelopement",
-            "entreprise": "INTM",
-            "description": "Développement et maintenance d'applications intranet et web dans l'assurance santé. Mission chez Euro Information (filial du Crédit Mutuel). Analyse du besoin ,Rédaction des spécifications fonctionnelles et techniques, Développement COBOL et C#.NET (framework devbooster), Test unité, Test d’intégration, Maintenance, Correction d’incident",
-            "periode": "Juillet 2023 - Décembre 2025",
-        },
-    ]
 competences = [
     {
         "categorie": "Langages de programmation",
@@ -74,28 +66,28 @@ vie_associatives = [
             "association": "À KOI K'ON JOUE",
             "description": "Participation à l'animation des festival de jeux de société tout public (enfants, adultes et experts). Accueil des visiteurs, encadrement de jeux",
             "periode": "2022 - Présent",
-            "lien": "/AKKJ",
+            "lien": "https://www.facebook.com/assoakkj/?locale=fr_FR",
         },
         {
             "role": "Membre actif",
             "association": "Lard de la guerre",
             "description": "Participation aux spectacle et annimation de la troupe",
             "periode": "2024 - Présent",
-            "lien": "/LardDeLaGuerre",
+            "lien": "https://www.facebook.com/p/Lard-de-la-Guerre-100057258437369/?locale=fr_FR",
         },
         {
             "role": "Ancien membre",
             "association": "Math en JEANS",
             "description": "Initiation a la recherche en mathématique.",
             "periode": "2016 - 2019",
-            "lien": "/MathEnJeans",
+            "lien": "https://www.mathenjeans.fr/",
         },
         {
             "role": "Ancien membre",
             "association": "Troupe de théatre du lycée",
             "description": "Participation aux representation lors des portes ouverte.",
             "periode": "2017 - 2019",
-            "lien": "/Theatre",
+            "lien": "https://lycee-heinrich-nessel.fr/",
         },
     ]
 loisirs = [
