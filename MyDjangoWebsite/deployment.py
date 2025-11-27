@@ -2,6 +2,8 @@
 from settings import *
 
 DEBUG = False
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 ALLOWED_HOSTS = [os.environ.get('WEBSITE_HOTNAME')]
 CSRF_TRUSTED_ORIGINS = [f"https://{os.environ.get('WEBSITE_HOTNAME')}"]
