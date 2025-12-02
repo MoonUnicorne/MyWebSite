@@ -96,3 +96,6 @@ loisirs = [
         "Jeux de role (joueur et maitre de jeux)",
         "Loisir créatif : realisation de maquette, assemblage et peinture de figurine, bricolage, modelisation 3D",
     ]
+
+
+print("CV data module loaded.")
