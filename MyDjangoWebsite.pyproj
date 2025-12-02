@@ -60,7 +60,8 @@
   <ItemGroup>
     <Content Include=".production" />
     <Content Include="app\static\app\scripts\site.js" />
-    <Content Include="app\templates\app\cv.html" />
+    <Content Include="app\templates\app\cv2.html" />
+    <Content Include="app\templates\app\projects.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\site.css" />
