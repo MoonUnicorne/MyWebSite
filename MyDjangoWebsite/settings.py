@@ -52,14 +52,14 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "MyDjangoWebsite.urls"
-
+tempdir = BASE_DIR / 'templates'
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": ['templates',
                  os.path.join(BASE_DIR, 'templates'),
                  os.path.join(BASE_DIR, 'app', 'templates', 'app'),
-                 BASE_DIR / 'templates'],
+                 tempdir],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -72,7 +72,6 @@ TEMPLATES = [
 ]
 
 
-print("TEMPLATES DIRS =", ' ; '.join(TEMPLATES[0]["DIRS"]))
 
 
 WSGI_APPLICATION = "MyDjangoWebsite.wsgi.application"
