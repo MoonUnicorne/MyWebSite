@@ -8,6 +8,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 ALLOWED_HOSTS = [os.environ.get('WEBSITE_HOTNAME')]
 CSRF_TRUSTED_ORIGINS = [f"https://{os.environ.get('WEBSITE_HOTNAME')}"]
 
+print("Allowed hosts: " + str(ALLOWED_HOSTS)))
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -24,17 +26,17 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
-connectionString = os.environ.get('AZURE_POSTGRESQL_CONNECTIONSTRING')
-parameters = {pair.split('='):pair.split('=')[1] for pair in connectionString.split(' ')}
+# connectionString = os.environ.get('AZURE_POSTGRESQL_CONNECTIONSTRING')
+# parameters = {pair.split('='):pair.split('=')[1] for pair in connectionString.split(' ')}
 
 
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': parameters['dbname'],
-        'HOST': parameters['host'],
-        'USER': parameters['user'],
-        'PASSWORD': parameters['password'],
+        'NAME': os.environ.get('DBNAME'),
+        'HOST': os.environ.get('DBHOST'),
+        'USER': os.environ.get('DBUSER'),
+        'PASSWORD': os.environ.get('DBPASSWORD'),
     }
 }
