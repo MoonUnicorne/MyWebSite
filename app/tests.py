@@ -37,3 +37,13 @@ class ViewTest(TestCase):
         """Tests the cv page."""
         response = self.client.get('/cv', follow=True)
         self.assertContains(response, 'CV', 4, 200)
+
+    def test_projects(self):
+        """Tests the projects page."""
+        response = self.client.get('/projects', follow=True)
+        self.assertContains(response, 'Projects', 2, 200)
+
+    def test_dontExist(self):
+        """Tests a non-existing page."""
+        response = self.client.get('/thispagedoesnotexist', follow=True)
+        self.assertEqual(response.status_code, 404)

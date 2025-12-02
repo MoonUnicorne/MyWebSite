@@ -62,3 +62,16 @@ def cv(request):
             'loisirs': cv_data.loisirs,
         }
     )
+
+def projects(request):
+    """Renders the projects page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/projects.html',
+        {
+            'title':'Projects',
+            'message':'Your projects page.',
+            'year':datetime.now().year,
+        }
+    )
