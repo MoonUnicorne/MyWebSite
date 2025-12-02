@@ -68,15 +68,11 @@ TEMPLATES = [
     },
 ]
 
-TEMPLATE_DIRS = [
-    os.path.join(BASE_DIR, 'templates'),
-]
 
 print("TEMPLATES DIRS =", ' ; '.join(TEMPLATES[0]["DIRS"]))
-print("TEMPLATE_DIRS =", ' ; '.join(TEMPLATE_DIRS))
 
 
-WSGI_APPLICATION = "blog.wsgi.application"
+WSGI_APPLICATION = "MyDjangoWebsite.wsgi.application"
 
 
 # Database
