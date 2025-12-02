@@ -1,4 +1,4 @@
-"""
+﻿"""
 Django settings for MyDjangoWebsite project.
 
 Based on 'django-admin startproject' using Django 2.1.2.
@@ -59,7 +59,7 @@ ROOT_URLCONF = 'MyDjangoWebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
