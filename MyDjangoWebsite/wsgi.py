@@ -19,7 +19,7 @@ https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/
 import os
 from django.core.wsgi import get_wsgi_application
 from dotenv import load_dotenv
-load_dotenv()
+# load_dotenv()
 
 settings_module = 'MyDjangoWebsite.deployment' if 'WEBSITE_HOSTNAME' in os.environ else 'MyDjangoWebsite.settings'
 
