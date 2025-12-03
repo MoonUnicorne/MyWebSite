@@ -14,6 +14,14 @@
 <div>
     <a href="{% url 'cv' %}" class="btn btn-primary">Allez voir mon CV</a>
     <h2>Comming soon ...</h2>
+
+    <ul>
+        {% for variable in environnement %}
+        <li>
+            {{ variable }}
+        </li>
+        {% endfor %}
+    </ul>
 </div>
 
 {% endblock %}
