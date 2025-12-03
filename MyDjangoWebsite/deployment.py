@@ -10,7 +10,7 @@ DEBUG = False
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-ALLOWED_HOSTS = [os.environ.get('WEBSITE_HOTNAME')]
+ALLOWED_HOSTS = [os.environ.get('WEBSITE_HOSTNAME')]
 print("Allowed hosts: " + str(ALLOWED_HOSTS))
 
 CSRF_TRUSTED_ORIGINS = [f"https://{os.environ.get('WEBSITE_HOTNAME')}"]
