@@ -1,12 +1,12 @@
+name: Release
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["Django CI"]
+    branches: [main]
   workflow_dispatch:
   
 jobs:
-  run_pull:
-    name: run pull
+  on-success:
     runs-on: ubuntu-latest
     
     steps:
@@ -14,10 +14,10 @@ jobs:
       # check this thread to understand why its needed:
       # https://stackoverflow.com/a/70447517
       run: |
-        install -m 600 -D /dev/null ~/.ssh/id_rsa
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-        ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
     - name: connect and pull
-      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && source ~/pyapps/venv/bin/activate && python manage.py migrate && deactivate && exit"
+      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && source ~/pyapps/venv/bin/activate && python manage.py migrate && deactivate && sudo systemctl daemon-reload && sudo systemctl restart gunicorn.socket gunicorn.service && exit"
     - name: cleanup
       run: rm -rf ~/.ssh
