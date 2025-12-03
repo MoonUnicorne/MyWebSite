@@ -1,4 +1,4 @@
-import os
+﻿import os
 import pprint
 formations = [
         {
@@ -106,5 +106,5 @@ print("CV data module loaded.")
 env_var = os.environ 
   
 # Print the list of user's 
-print("User's Environment variable:") 
-pprint.pprint(dict(env_var), width = 1) 
+#print("User's Environment variable:") 
+#pprint.pprint(dict(env_var), width = 1) 
