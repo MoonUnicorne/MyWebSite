@@ -8,7 +8,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 ALLOWED_HOSTS = [os.environ.get('WEBSITE_HOTNAME')]
 CSRF_TRUSTED_ORIGINS = [f"https://{os.environ.get('WEBSITE_HOTNAME')}"]
 
-print("Allowed hosts: " + str(ALLOWED_HOSTS)))
+print("Allowed hosts: " + str(ALLOWED_HOSTS))
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
