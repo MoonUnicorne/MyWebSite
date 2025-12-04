@@ -95,8 +95,8 @@ vie_associatives = [
 loisirs = [
         "Programmation de projets personnels",
         "Jeux de société",
-        "Jeux de role (joueur et maitre de jeux)",
-        "Loisir créatif : realisation de maquette, assemblage et peinture de figurine, bricolage, modelisation 3D",
+        "Jeux de rôle (joueur et maître du jeu)",
+        "Loisirs créatifs : realisation de maquettes, assemblage et peinture de figurines, bricolage, modélisation 3D",
     ]
 
 

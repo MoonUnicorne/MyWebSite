@@ -5,7 +5,6 @@ Definition of views.
 from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpRequest
-import os
 from app import cv_data
 
 def home(request):
@@ -17,7 +16,6 @@ def home(request):
         {
             'title':'Home Page',
             'year':datetime.now().year,
-            'environnement': os.environ,
         }
     )
 
