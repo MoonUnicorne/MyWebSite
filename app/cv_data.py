@@ -100,11 +100,11 @@ loisirs = [
     ]
 
 
-print("CV data module loaded.")
+#print("CV data module loaded.")
 
 # Get the list of user's 
 env_var = os.environ 
   
 # Print the list of user's 
-print("User's Environment variable:") 
-pprint.pprint(dict(env_var), width = 1) 
+#print("User's Environment variable:") 
+#pprint.pprint(dict(env_var), width = 1) 

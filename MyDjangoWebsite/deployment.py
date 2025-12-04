@@ -12,7 +12,7 @@ DEBUG = False
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 ALLOWED_HOSTS = [os.environ.get('WEBSITE_HOSTNAME'), "0.0.0.0:8080"]
-print("Allowed hosts: " + str(ALLOWED_HOSTS))
+#print("Allowed hosts: " + str(ALLOWED_HOSTS))
 
 CSRF_TRUSTED_ORIGINS = [f"https://{os.environ.get('WEBSITE_HOTNAME')}"]
 
@@ -77,7 +77,7 @@ DATABASES = {
     }
 }
 
-pprint(DATABASES)
+#pprint(DATABASES)
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
