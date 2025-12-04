@@ -138,7 +138,7 @@ LOGGING = {
     'handlers': {
         'file': {
             'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
+            'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'debug.log'),
         },
     },
