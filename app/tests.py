@@ -36,7 +36,7 @@ class ViewTest(TestCase):
     def test_cv2(self):
         """Tests the cv page."""
         response = self.client.get('/cv', follow=True)
-        self.assertContains(response, 'CV', 4, 200)
+        self.assertContains(response, 'CV', 5, 200)
 
     def test_projects(self):
         """Tests the projects page."""
