@@ -2,9 +2,9 @@
 
 on:
   push:
-    branches: [ "main", "FormationDjango", "RefactorVisualStudio" ]
+    branches: [ "main", "develop", "featur/*", "fix/*" ]
   pull_request:
-    branches: [ "main", "FormationDjango", "RefactorVisualStudio" ]
+    branches: [ "main", "develop", "featur/*", "fix/*" ]
 
   workflow_dispatch:
 
