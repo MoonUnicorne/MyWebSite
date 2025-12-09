@@ -2,9 +2,9 @@
 
 on:
   push:
-    branches: [ all ]
+    branches: [ "main", "develop", "featur/*", "fix/*" ]
   pull_request:
-    branches: [ all ]
+    branches: [ "main", "develop", "featur/*", "fix/*" ]
 
   workflow_dispatch:
 
