@@ -175,7 +175,7 @@
                     <li class="list-group-item">
                         <span>{{ formation.annee }}</span>
                         <span>
-                            {{ formation.titre }} - {{ formation.lieu }}
+                            <a href="{{ formation.lien }}">{{ formation.titre }}</a> - {{ formation.lieu }}
                         </span>
                     </li>
                     {% endfor %}

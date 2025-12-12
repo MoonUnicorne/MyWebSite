@@ -3,35 +3,47 @@ import pprint
 formations = [
         {
             "lieu": "Formation UDEMY",
+            "titre": "Développeur C# | Formation complète 2025 - Jonathan Roux",
+            "annee": "2025",
+            "lien": "https://codeavecjonathan.com",
+        },
+        {
+            "lieu": "Formation UDEMY",
             "titre": "Le cloud d'Azure: maîtriser les fondamentaux par la pratique",
             "annee": "2025",
+            "lien": "https://www.udemy.com/course/azure-les-fondamentaux/",
         },
         {
             "lieu": "Formation UDEMY",
             "titre": "Python & Django - Formation Développeur Web Full Stack",
             "annee": "2025",
+            "lien": "https://www.udemy.com/course/python-django-formation-developpeur-web-full-stack/",
         },
         {
             "lieu": "INTM",
             "titre": "Formation NSIS d'initiation à la programmation C# sur.Net",
             "annee": "2023",
+            "lien": "https://www.intm.fr/",
         },
         {
             "lieu": "INTM",
             "titre": "Formation NSIS au métier d'analyste-programmeur Cobol Mainframe",
             "annee": "2023",
+            "lien": "https://www.intm.fr/",
         },
         {
             "lieu": "UFR de mathématique et d'informatique de Strasbourg",
             "titre": "Licence d'informatique (Mention Assez Bien)",
             "annee": "2022",
+            "lien": "https://www.unistra.fr/",
         },
         {
             "lieu": "Lycée Heinrich-Nessel, Haguenau",
             "titre": "Baccalauréat Science de l'Ingénieur (Mention Assez Bien)",
             "annee": "2019",
+            "lien": "https://lycee-heinrich-nessel.fr/",
         },
-        ]
+]
 competences = [
     {
         "categorie": "Langages de programmation",
