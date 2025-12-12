@@ -49,6 +49,11 @@ function SwitchTheme() {
         document.documentElement.setAttribute('data-bs-theme', 'dark')
         theme = 'dark'
     }
+    else if (theme == 'dark')
+    {
+        document.documentElement.setAttribute('data-bs-theme', 'custom')
+        theme = 'custom'
+    }
     else {
         document.documentElement.setAttribute('data-bs-theme', 'light')
         theme = 'light'
